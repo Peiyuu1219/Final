@@ -27,7 +27,8 @@ native_country_options = ['Cambodia', 'Canada', 'China', 'Columbia', 'Cuba', 'Do
                           'Iran', 'Ireland', 'Italy', 'Jamaica', 'Japan', 'Laos', 'Mexico', 'Nicaragua', 'Outlying-US(Guam-USVI-etc)', 'Peru', 
                           'Philippines', 'Poland', 'Portugal', 'Puerto-Rico', 'Scotland', 'South', 'Taiwan', 'Thailand', 'Trinadad&Tobago', 'United-States', 'Vietnam', 'Yugoslavia']
 
-# manually specify expected column (feature's name)
+# manually specify expected column (feature's name) 
+#all categories are of equal length
 expected_columns = [
     'age', 'capital-gain', 'capital-loss', 'hours-per-week',
     'workclass_Federal-gov', 'workclass_Local-gov', 'workclass_Never-worked', 'workclass_Private',
