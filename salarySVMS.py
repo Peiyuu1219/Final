@@ -63,6 +63,7 @@ def pad_list(lst, target_length):
     return (lst * (target_length // len(lst) + 1))[:target_length]
 
 # dummy for fit OneHotEncoder
+# lists have the same length by repeating elements in the list if necessary.
 max_length = len(native_country_options)
 categories_data = {
     'workclass': pad_list(workclass_options, max_length),
@@ -126,6 +127,7 @@ def main():
             numeric_features_scaled_df = pd.DataFrame(numeric_features_scaled, columns=numeric_columns)
     
             # combine scaled numeric features with encoded categorical features
+            #concat is a function from the pandas library used to concatenate (combine) two or more DataFrames
             final_input_data = pd.concat([numeric_features_scaled_df, encoded_df.reset_index(drop=True)], axis=1)
     
             # align input columns with expected column order
